@@ -1,0 +1,215 @@
+﻿<!-- Задача №1. Почему код даёт именно такие результаты?-->
+
+var a = 1, b = 1, c, d;
+c = ++a; alert(c); // 2 : ответ 2 т.к. используется префиксная форма инкремента. Значение увеличилось и вернулось.
+d = b++; alert(d); // 1 : ответ 1 т.к. используется постфиксная форма инкремента. Значение увеличилось, но вернулось старое.
+c = (2+ ++a); alert(c); // 5 : а увеличивается до числа 3. 2+3=5.
+d = (2+ b++); alert(d); // 4 : b увеличилось до 3х, но используется предыдущее значение b= 2. 2+2=4.
+alert(a); // 3 : это текущее значение, т.к. 2 раза увеличивали значение переменной а.
+alert(b); // 3 : это текущее значение, т.к. 2 раза увеличивали значение переменной b.
+
+<!-- Задача №2. Чему будет равен x в примере ниже? -->
+
+var a = 2;
+var x = 1 + (a *= 2);
+
+Ответ: 5, т.к. а=а*2=4; 4+1=5.
+
+<!-- Задача №3. Объявить две целочисленные переменные a и b и задать им произвольные начальные значения. 
+     Затем написать скрипт, который работает по следующему принципу:
+        * если a и b положительные, вывести их разность;
+        * если а и b отрицательные, вывести их произведение;
+        * если а и b разных знаков, вывести их сумму;
+        ноль можно считать положительным числом. -->
+        
+<script>        
+        var a = 7
+        var b = 2
+        if (a > 0 && b > 0){
+        x = a - b;
+        alert (x);
+        }
+        else if (a < 0 && b < 0){
+        x=a * b;
+        alert (x);
+        }
+        else if (a > 0 && b < 0 || a < 0 && b > 0){
+        x=a + b;
+        alert (x);
+        }
+<script>
+
+<script>        
+        var a = 7
+        var b = -2
+        if (a > 0 && b >0){
+        x = a - b;
+        alert (x);
+        }
+        else if (a < 0 && b <0){
+        x=a * b;
+        alert (x);
+        }
+        else if (a > 0 && b < 0 || a < 0 && b > 0){
+        x=a + b;
+        alert (x);
+        }
+</script>
+
+<script>        
+        var a = -2
+        var b = -7
+        if (a > 0 && b >0){
+        x = a - b;
+        alert (x);
+        }
+        else if (a < 0 && b <0){
+        x=a * b;
+        alert (x);
+        }
+        else if (a > 0 && b < 0 || a < 0 && b > 0){
+        x=a + b;
+        alert (x);
+        }
+</script>
+
+<!-- Задача №4. Присвоить переменной а значение в промежутке [0..15]. С помощью оператора switch организовать вывод 	
+     чисел от a до 15. -->
+     
+<script>
+
+        var a = 1 prompt ("Введите число от 0 до 15");
+        if (confirm("Вы уверены, что хотите продолжить?"))
+        switch (a) {
+
+                case "0":
+                    alert ("Число 0");
+                    break;
+                
+                case "1":
+                    alert ("Число 1");
+                    break;
+                
+                case "2":
+                    alert ("Число 2");
+                    break;
+                
+                case "3":
+                    alert ("Число 3");
+                    break;
+                
+                case "4":
+                    alert ("Число 4");
+                    break;
+                
+                case "5":
+                    alert ("Число 5");
+                    break;
+                
+                case "6":
+                    alert ("Число 6");
+                    break;
+                
+                case "7":
+                    alert ("Число 7");
+                    break;
+                
+                case "8":
+                    alert ("Число 8");
+                    break;
+                
+                case "9":
+                    alert ("Число 9");
+                    break;
+                
+                case "10":
+                    alert ("Число 10");
+                    break;
+                
+                case "11":
+                    alert ("Число 11");
+                    break;
+                
+                case "12":
+                    alert ("Число 12");
+                    break;
+                
+                case "13":
+                    alert ("Число 13");
+                    break;
+                
+                case "14":
+                    alert ("Число 14");
+                    break;
+                
+                case "15":
+                    alert ("Число 15");
+                    break;
+                    
+                    default:
+                    alert ("неверный ввод");
+                
+                    }
+</script>
+
+<!-- Задача №5. Реализовать основные 4 арифметические операции в виде функций с двумя параметрами. 
+     Обязательно использовать оператор return. -->
+          
+     
+<script>
+
+function sum(a, b){
+  return a + b;
+}
+   
+function multi(a, b){
+  return a * b;
+}
+
+
+function diff(a, b){
+  return a - b;
+}
+
+function division(a, b){
+    return a / b;
+  }
+
+
+alert(sum(5, 9));
+alert(multi(6, 8));
+alert(diff(8, 2));
+alert(division(25, 5));
+    
+</script>
+
+  
+
+<!-- Задача №6. Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation), 
+     где arg1, arg2 – значения аргументов, operation – строка с названием операции. 
+     В зависимости от переданного значения операции выполнить одну из арифметических операций 
+     (использовать функции из пункта 3) и вернуть полученное значение (использовать switch). -->
+ 
+
+ <script>
+
+function mathOperation(arg1, arg2, operation){
+  switch(operation){
+    case "sum":
+      return multi(arg1, arg2);
+    case "multi":
+      return sum(arg1, arg2);
+    case "diff":
+      return diff(arg1, arg2);
+    case "division":
+      return division(arg1, arg2);
+    
+  }
+}
+
+console.log(mathOperation(5, 2, "sum"));
+console.log(mathOperation(5, 2, "multi"));
+console.log(mathOperation(9, 4, "diff"));
+console.log(mathOperation(5, 1, "division"));
+
+</script>    
