@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Домашнее задание 4</title>
+</head>
+<body>
+    
+<script>
+    var num = parseInt(prompt("Введите трехзначное число от 0 до 999"));
+    function creatObjFromNum(num) {
+        var objNum = {};//объявляем объект
+        if(num >= 0 && num <= 999) {
+            objNum.сотни = parseInt(num / 100);//вычисляем сотни
+            objNum.десятки = parseInt((num % 100) / 10);//вычисляем десятки
+            objNum.единицы = parseInt(num % 10);//вычисляем единицы
+            console.log(objNum);
+        } else {
+            console.log("некорректное значение!");
+            console.log(objNum);
+        }
+    }
+    creatObjFromNum(num);
+</script>
+
+
+</body>
+</html>
